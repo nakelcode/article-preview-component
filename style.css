@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+   background-color: hsl(210, 46%, 95%);
+   font-size: 13px;
+   font-family: "Manrope", serif;
+   color: hsl(217, 19%, 35%);
+}
+main{
+    width: 91.67%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.drawer{
+    width: 300px;
+    border-radius: 10px 10px 0px 0px;
+    margin-top: 20px;
+}
+.main-content{
+    width: 300px;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+}
+.content{
+    padding: 20px;
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.character{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+span{
+    display: block;
+}
+.avatar{
+    border-radius: 50%;
+    width: 40px;
+}
+button{
+    background-color: hsl(210, 46%, 95%);
+    padding: 8px;
+    position: absolute;
+    right: 10px;
+    border: none;
+    border-radius: 50%;
+}
+button img{
+    width: 16px;
+}
+.share-active{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: hsl(217, 19%, 35%);
+    padding: 20px;
+    gap: 10px;
+    border-radius: 0px 0px 10px 10px;
+}
+.social{
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+}
+h1{
+    font-size: 17px;
+    color: hsl(217, 19%, 35%);
+}
+h2{
+    font-size: 13px;
+    margin-left: 10px;
+}
+h2 span{
+    opacity: 0.7;
+}
+#last-child h2{
+    color: white;
+    letter-spacing: 0.3rem;
+    font-weight: 400;
+}
+#desktop{
+    display: none;
+}
+#desktop-share{
+    display: none;
+}
+@media (min-width: 1440px) {
+    .main-container{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .drawer{
+        height: 300px;
+        border-radius: 10px 0px 0px 10px;
+        margin: 0;
+    }
+    .main-content{
+        height: 300px;
+        border-radius: 0px 10px 10px 0px;
+    }
+    button{
+        position: absolute;
+        right: 0;
+    }
+    #last-child{
+        display: none;
+    }
+    #mobile{
+        display: none;
+    }
+    #desktop{
+        display: block;
+    }    
+    #desktop-child{
+        position: relative;
+    }
+    #desktop-share{
+        display: block;
+    }
+    .share-tooltip{
+        position: absolute;
+        bottom: 110px;
+        right: 230px;
+        transform: translateX(-50%);
+        background-color: hsl(217, 19%, 35%);
+        color: white;
+        padding: 10px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        opacity: 1;
+        pointer-events: none;
+        transition: opacity 0.3s ease-in-out;
+    }
+    .share-tooltip::after{
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 5px;
+        border-style: solid;
+        border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+    }
+}
